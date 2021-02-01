@@ -1,0 +1,121 @@
+$color: #f0f2f8
+$secondColor: rgb(238, 224, 224)
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap')
+
+*, *:before, *:after
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+body
+  font-family: Poppins
+  background: $color
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  padding: 50px 0px
+  height: 100vh
+  color: rgb(36, 36, 36)
+
+p
+  font-family: monospace
+
+li
+  list-style: none
+  display: inline
+  text-decoration: none
+  font-size: 24px
+
+a
+  color: rgb(65, 65, 65)
+  text-decoration: none
+
+ul
+  display: flex
+  justify-content: space-around
+
+header
+  position: absolute
+  top: 20px
+  width: 20vw
+
+footer
+  position: absolute
+  bottom: 20px
+
+h1
+  font-size: 5vw
+
+main
+  max-width: 1200px
+
+.product-pic
+  width: 100%
+  height: 720px
+  object-fit: cover
+  object-position: 100% 85%
+  max-width: 100%
+  border: 10px solid $secondColor
+  grid-area: picture
+
+.title
+  text-align: center
+  margin-bottom: 50px
+
+.buy-container
+  display: grid
+  grid-template-columns: 1.5fr 0.7fr
+  grid-template-rows: max-content max-content 1fr
+  gap: 0px 50px
+  grid-template-areas: "product-pic subtitle" "product-pic description" "product-pic price"
+
+.subtitle
+  grid-area: subtitle
+  font-size: 32px
+
+p.description
+  grid-area: description
+  font-size: 16px
+  line-height: 1.5
+  margin-bottom: 100px
+
+p.price
+  margin-bottom: 10px
+  font-size: 24px
+  font-weight: 600
+
+.button
+  height: 50px
+  width: 80%
+  background: $secondColor
+  border: none
+  font-size: 16px
+  font-weight: 600
+  cursor: pointer
+
+.button-container
+  grid-area: price
+  display: flex
+  justify-content: space-between
+  align-items: baseline
+
+img.product-pic
+  margin-bottom: 20px
+  grid-area: product-pic
+
+.buy-container *
+  margin-bottom: 30px
+
+.small-info
+  cursor: pointer
+
+.barba-leave-active, .barba-enter-active
+  transition: opacity 450ms ease
+
+.barba-leave, .barba-enter-to, .barba-once-to
+  opacity: 1
+
+.barba-enter, .barba-once, .barba-leave-to
+  opacity: 0
